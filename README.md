@@ -81,6 +81,44 @@ extractText("image.png", { lang: "spa" }) // Spanish
 
 ---
 
+## 🚀 React Usage Example
+
+```javascript
+import React, { useState } from "react";
+import { extractText, extractTextFromMultipleImages } from "ocr-easy";
+
+function OCRApp() {
+    const [image, setImage] = useState(null);
+    const [text, setText] = useState("");
+
+    const handleImageUpload = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = async (e) => {
+                const base64Image = e.target.result;
+                const extractedText = await extractText(base64Image, { enhance: true });
+                setText(extractedText);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
+    return (
+        <div>
+            <h1>OCR Easy React Demo</h1>
+            <input type="file" onChange={handleImageUpload} />
+            <p>Extracted Text:</p>
+            <textarea value={text} readOnly rows="5" cols="50"></textarea>
+        </div>
+    );
+}
+
+export default OCRApp;
+```
+
+---
+
 ## 🛠️ Options
 
 | Option  | Type    | Default  | Description |
@@ -115,3 +153,4 @@ Pull requests are welcome! Feel free to contribute or report issues.
 ⭐ **Star this project if you found it useful!**
 
 ---
+
