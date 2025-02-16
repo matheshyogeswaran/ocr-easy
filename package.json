@@ -1,8 +1,19 @@
 {
   "name": "ocr-easy",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simple OCR library with image preprocessing, URL/base64 support, and multi-language OCR.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matheshyogeswaran/ocr-easy.git"
+  },
+  "keywords": [
+    "ocr",
+    "tesseract",
+    "text-extraction",
+    "image-to-text",
+    "ocr-easy"
+  ],
   "scripts": {
     "test": "node test.js"
   },
