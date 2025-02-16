@@ -118,6 +118,13 @@ export default OCRApp;
 ```
 
 ---
+## 📺 Demo Video
+
+Click the image below to watch the **React Demo** of **OCR Easy**:
+
+[![Watch the Demo](https://img.youtube.com/vi/SBsa-Jk4j5E/0.jpg)](https://youtu.be/SBsa-Jk4j5E)
+
+---
 
 ## 🛠️ Options
 
